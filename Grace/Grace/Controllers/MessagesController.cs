@@ -31,7 +31,9 @@ namespace Grace
             }
             else
             {
-                HandleSystemMessage(activity);
+                Activity reply = HandleSystemMessage(activity);
+                ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
+                await connector.Conversations.ReplyToActivityAsync(reply);
             }
             var response = Request.CreateResponse(HttpStatusCode.OK);
             return response;
@@ -49,11 +51,13 @@ namespace Grace
                 // Handle conversation state changes, like members being added and removed
                 // Use Activity.MembersAdded and Activity.MembersRemoved and Activity.Action for info
                 // Not available in all channels
+                //return message.CreateReply("Olá, sou Grace!");
             }
             else if (message.Type == ActivityTypes.ContactRelationUpdate)
             {
                 // Handle add/remove from contact lists
                 // Activity.From + Activity.Action represent what happened
+                return message.CreateReply("Olá, sou Grace!");
             }
             else if (message.Type == ActivityTypes.Typing)
             {
