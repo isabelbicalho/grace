@@ -1,0 +1,807 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{45D84406-E820-42BB-BC6E-DE8E012419CA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ChatScriptDLL</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CHATSCRIPTDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;CHATSCRIPTDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CHATSCRIPTDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;CHATSCRIPTDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\authorizedIP.txt" />
+    <Text Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\changes.txt" />
+    <Text Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\license.txt" />
+    <Text Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\readme.txt" />
+    <Text Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\version.txt" />
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\LOEBNERVS2010\loebner_chatbot\loebner_chatbot.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\LOEBNERVS2010\loebner_chatbot\Resource.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\LOEBNERVS2010\loebner_chatbot\stdafx.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\LOEBNERVS2010\loebner_chatbot\targetver.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\common.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\common1.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\constructCode.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\csocket.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\cs_ev.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\curl\curl.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\curl\curlbuild.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\curl\curlrules.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\curl\curlver.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\curl\easy.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\curl\mprintf.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\curl\multi.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\dictionaryMore.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\dictionarySystem.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\duktape\duktape.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\duktape\duk_config.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\english.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver\ev++.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver\ev.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver\event.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver\ev_vars.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver\ev_wrap.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\factSystem.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\functionExecute.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\evserver\ev++.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\evserver\ev.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\evserver\event.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\evserver\ev_vars.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\evserver\ev_wrap.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\b64_ntop.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\b64_pton.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bcon.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-atomic.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-clock.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-compat.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-context-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-context.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-endian.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-error.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-iso8601-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-iter.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-json.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-keys.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-macros.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-md5.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-memory.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-oid.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-reader.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-stdint-win32.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-string.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-thread-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-timegm-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-types.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-utf8.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-value.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-version-functions.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-writer.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-apm-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-apm.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-array-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-async-cmd-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-async-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-b64-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-buffer-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-bulk-operation-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-bulk-operation.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-client-pool-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-client-pool.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-client-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-client.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-cluster-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-collection-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-collection.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-counters-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-crypto-common-crypto-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-crypto-openssl-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-crypto-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-cursor-array-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-cursor-cursorid-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-cursor-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-cursor-transform-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-cursor.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-database-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-database.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-errno-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-error.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-find-and-modify-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-find-and-modify.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-flags.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-gridfs-file-list-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-gridfs-file-list.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-gridfs-file-page-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-gridfs-file-page.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-gridfs-file-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-gridfs-file.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-gridfs-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-gridfs.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-host-list-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-host-list.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-index.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-init.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-iovec.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-list-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-log-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-log.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-matcher-op-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-matcher-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-matcher.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-memcmp-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-opcode-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-opcode.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-openssl-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-queue-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-rand-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-rand.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-read-concern-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-read-concern.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-read-prefs-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-read-prefs.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-rpc-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-sasl-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-scram-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-secure-transport-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-server-description-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-server-description.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-server-stream-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-set-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-socket-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-socket.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-ssl-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-ssl.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-buffered.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-file.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-gridfs.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-socket.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl-bio-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-tls-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-tls-secure-transport-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-tls-secure-transport.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-tls.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-thread-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-topology-description-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-topology-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-topology-scanner-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-trace.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-uri-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-uri.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-util-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-version-functions.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-write-command-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-write-concern-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-write-concern.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\utlist.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\MongoDBClient.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\stdafx.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\targetver.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\infer.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\jsmn.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\json.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mainSystem.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\markSystem.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongodb.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\b64_ntop.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\b64_pton.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bcon.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-atomic.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-clock.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-compat.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-config.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-context-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-context.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-endian.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-error.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-iso8601-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-iter.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-json.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-keys.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-macros.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-md5.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-memory.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-oid.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-reader.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-stdint-win32.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-stdint.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-string.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-thread-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-timegm-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-types.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-utf8.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-value.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-version-functions.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-version.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-writer.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-apm-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-apm.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-array-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-async-cmd-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-async-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-b64-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-buffer-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-bulk-operation-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-bulk-operation.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-client-pool-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-client-pool.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-client-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-client.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-cluster-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-collection-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-collection.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-config.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-counters-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-crypto-common-crypto-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-crypto-openssl-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-crypto-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-cursor-array-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-cursor-cursorid-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-cursor-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-cursor-transform-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-cursor.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-database-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-database.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-errno-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-error.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-find-and-modify-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-find-and-modify.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-flags.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-gridfs-file-list-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-gridfs-file-list.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-gridfs-file-page-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-gridfs-file-page.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-gridfs-file-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-gridfs-file.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-gridfs-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-gridfs.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-host-list-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-host-list.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-index.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-init.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-iovec.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-list-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-log-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-log.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-matcher-op-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-matcher-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-matcher.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-memcmp-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-opcode-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-opcode.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-openssl-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-queue-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-rand-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-rand.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-read-concern-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-read-concern.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-read-prefs-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-read-prefs.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-rpc-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-sasl-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-scram-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-secure-transport-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-server-description-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-server-description.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-server-stream-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-set-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-socket-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-socket.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-ssl-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-ssl.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-buffered.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-file.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-gridfs.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-socket.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-tls-openssl-bio-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-tls-openssl-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-tls-openssl.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-tls-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-tls-secure-transport-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-tls-secure-transport.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-tls.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-thread-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-topology-description-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-topology-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-topology-scanner-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-trace.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-uri-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-uri.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-util-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-version-functions.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-version.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-write-command-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-write-concern-private.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-write-concern.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\utlist.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\MongoDBClient.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\stdafx.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\targetver.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mprintf.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\multi.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\os.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\outputSystem.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\patternSystem.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\postgres.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\postgres\libpq-fe.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\postgres\pg_config.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\postgres\pg_config_ext.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\postgres\pg_config_os.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\postgres\postgres_ext.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\privatesrc.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\scriptCompile.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\spellcheck.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\systemVariables.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\tagger.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\testing.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\textUtilities.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\tokenSystem.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\topicSystem.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\userCache.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\userSystem.h" />
+    <ClInclude Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\variableSystem.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\LOEBNERVS2010\loebner_chatbot\loebner_chatbot.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\LOEBNERVS2010\loebner_chatbot\stdafx.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\constructCode.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\csocket.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\cs_ev.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\dictionarySystem.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\duktape\duktape.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\english.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\englishTagger.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver\ev.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver\event.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver\ev_epoll.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver\ev_kqueue.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver\ev_poll.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver\ev_port.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver\ev_select.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\evserver\ev_win32.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\factSystem.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\functionExecute.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\evserver\ev.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\evserver\event.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\evserver\ev_epoll.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\evserver\ev_kqueue.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\evserver\ev_poll.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\evserver\ev_port.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\evserver\ev_select.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\evserver\ev_win32.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bcon.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-atomic.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-clock.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-context.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-error.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-iso8601.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-iter.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-json.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-keys.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-md5.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-memory.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-oid.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-reader.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-string.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-timegm.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-utf8.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-value.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-version-functions.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson-writer.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\bson\bson.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-apm.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-array.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-async-cmd.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-async.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-b64.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-buffer.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-bulk-operation.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-client-pool.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-client.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-cluster.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-collection.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-counters.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-crypto-common-crypto.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-crypto-openssl.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-crypto.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-cursor-array.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-cursor-cursorid.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-cursor-transform.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-cursor.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-database.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-find-and-modify.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-gridfs-file-list.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-gridfs-file-page.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-gridfs-file.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-gridfs.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-host-list.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-index.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-init.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-list.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-log.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-matcher-op.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-matcher.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-memcmp.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-opcode.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-openssl.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-queue.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-rand-common-crypto.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-rand-openssl.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-read-concern.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-read-prefs.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-rpc.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-sasl.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-scram.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-secure-transport.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-server-description.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-server-stream.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-set.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-socket.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-ssl.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-buffered.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-file.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-gridfs.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-socket.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl-bio.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-tls-secure-transport.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream-tls.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-stream.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-topology-description.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-topology-scanner.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-topology.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-uri.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-util.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-version-functions.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-write-command.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\mongoc-write-concern.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\infer.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\javascript.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\jsmn.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\json.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mainSystem.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\markSystem.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongodb.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bcon.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-atomic.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-clock.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-context.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-error.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-iso8601.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-iter.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-json.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-keys.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-md5.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-memory.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-oid.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-reader.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-string.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-timegm.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-utf8.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-value.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-version-functions.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson-writer.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\bson\bson.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-apm.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-array.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-async-cmd.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-async.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-b64.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-buffer.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-bulk-operation.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-client-pool.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-client.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-cluster.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-collection.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-counters.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-crypto-common-crypto.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-crypto-openssl.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-crypto.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-cursor-array.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-cursor-cursorid.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-cursor-transform.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-cursor.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-database.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-find-and-modify.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-gridfs-file-list.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-gridfs-file-page.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-gridfs-file.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-gridfs.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-host-list.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-index.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-init.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-list.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-log.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-matcher-op.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-matcher.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-memcmp.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-opcode.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-openssl.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-queue.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-rand-common-crypto.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-rand-openssl.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-read-concern.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-read-prefs.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-rpc.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-sasl.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-scram.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-secure-transport.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-server-description.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-server-stream.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-set.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-socket.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-ssl.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-buffered.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-file.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-gridfs.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-socket.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-tls-openssl-bio.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-tls-openssl.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-tls-secure-transport.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream-tls.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-stream.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-topology-description.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-topology-scanner.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-topology.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-uri.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-util.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-version-functions.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-write-command.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\mongoc-write-concern.c" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\os.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\outputSystem.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\patternSystem.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\postgres.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\privatesrc.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\scriptCompile.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\secure.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\spellcheck.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\systemVariables.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\tagger.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\testing.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\textUtilities.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\tokenSystem.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\topicSystem.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\userCache.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\userSystem.cpp" />
+    <ClCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\variableSystem.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\DICT\ENGLISH\dict.bin" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\DICT\ENGLISH\facts.bin" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ChatScript-Advanced-User-Manual.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ChatScript-Basic-User-Manual.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ChatScript-Debugging-Manual.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ChatScript-Fact-Manual.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ChatScript-Finalizing-A-Bot.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ChatScript-Json.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ChatScript-Memorization.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ChatScript-Overview-of-Input-to-Output.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ChatScript-Pattern-Redux.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ChatScript-System-Functions-Manual.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ChatScript-System-Variables-and-Engine-defined-Concepts.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\CLIENTS-AND-SERVERS\ChatScript-Amazon-Server.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\CLIENTS-AND-SERVERS\ChatScript-ClientServer-Manual.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\CLIENTS-AND-SERVERS\ChatScript-External-Communications.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Analytics-Manual.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Control-Scripts.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Document-Reader.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Exotica-Examples.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Javascript.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-MongoDB.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Planning.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-PosParser.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-PostgreSQL.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\Installing-and-Updating-ChatScript.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\OVERVIEWS-AND-TUTORIALS\ChatScript-Tutorial.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\OVERVIEWS-AND-TUTORIALS\What-is-ChatScript.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-German.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-Harry.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-NLTK.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-Postgres.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-Stockpile.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\HTMLDOCUMENTATION\README.html" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\op-delete.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\op-get-more.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\op-header.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\op-insert.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\op-kill-cursors.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\op-msg.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\op-query.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\op-reply.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\include\mongo\mongoc\op-update.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\op-delete.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\op-get-more.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\op-header.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\op-insert.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\op-kill-cursors.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\op-msg.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\op-query.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\op-reply.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\SRC\mongo\mongoc\op-update.def" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\talk.vbs" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\TMP\prebuild0.bin" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\TMP\prebuild1.bin" />
+    <None Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\TMP\prebuild2.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\LOEBNERVS2010\loebner_chatbot\Debug\loebner_chatbot.exe.embed.manifest" />
+    <Manifest Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\LOEBNERVS2010\loebner_chatbot\Debug\loebner_chatbot.exe.intermediate.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\LOEBNERVS2010\loebner_chatbot\Debug\loebner_chatbot_manifest.rc" />
+    <ResourceCompile Include="D:\Documents\POCI\ChatScript\ChatScript-6.83\LOEBNERVS2010\loebner_chatbot\loebner_chatbot.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
