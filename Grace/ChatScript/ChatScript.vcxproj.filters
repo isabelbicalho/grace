@@ -1,0 +1,1846 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\DICT\ENGLISH\dict.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Files\DICT\ENGLISH\facts.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Files\HTMLDOCUMENTATION\ChatScript-Advanced-User-Manual.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ChatScript-Basic-User-Manual.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ChatScript-Debugging-Manual.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ChatScript-Fact-Manual.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ChatScript-Finalizing-A-Bot.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ChatScript-Json.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ChatScript-Memorization.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ChatScript-Overview-of-Input-to-Output.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ChatScript-Pattern-Redux.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ChatScript-System-Functions-Manual.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ChatScript-System-Variables-and-Engine-defined-Concepts.html" />
+    <None Include="Files\HTMLDOCUMENTATION\CLIENTS-AND-SERVERS\ChatScript-Amazon-Server.html" />
+    <None Include="Files\HTMLDOCUMENTATION\CLIENTS-AND-SERVERS\ChatScript-ClientServer-Manual.html" />
+    <None Include="Files\HTMLDOCUMENTATION\CLIENTS-AND-SERVERS\ChatScript-External-Communications.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Analytics-Manual.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Control-Scripts.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Document-Reader.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Exotica-Examples.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Javascript.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-MongoDB.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Planning.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-PosParser.html" />
+    <None Include="Files\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-PostgreSQL.html" />
+    <None Include="Files\HTMLDOCUMENTATION\Installing-and-Updating-ChatScript.html" />
+    <None Include="Files\HTMLDOCUMENTATION\OVERVIEWS-AND-TUTORIALS\ChatScript-Tutorial.html" />
+    <None Include="Files\HTMLDOCUMENTATION\OVERVIEWS-AND-TUTORIALS\What-is-ChatScript.html" />
+    <None Include="Files\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-German.html" />
+    <None Include="Files\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-Harry.html" />
+    <None Include="Files\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-NLTK.html" />
+    <None Include="Files\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-Postgres.html" />
+    <None Include="Files\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-Stockpile.html" />
+    <None Include="Files\HTMLDOCUMENTATION\README.html" />
+    <None Include="Files\SRC\include\mongo\mongoc\op-delete.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\include\mongo\mongoc\op-get-more.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\include\mongo\mongoc\op-header.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\include\mongo\mongoc\op-insert.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\include\mongo\mongoc\op-kill-cursors.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\include\mongo\mongoc\op-msg.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\include\mongo\mongoc\op-query.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\include\mongo\mongoc\op-reply.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\include\mongo\mongoc\op-update.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\mongo\mongoc\op-delete.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\mongo\mongoc\op-get-more.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\mongo\mongoc\op-header.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\mongo\mongoc\op-insert.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\mongo\mongoc\op-kill-cursors.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\mongo\mongoc\op-msg.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\mongo\mongoc\op-query.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\mongo\mongoc\op-reply.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\SRC\mongo\mongoc\op-update.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Files\talk.vbs" />
+    <None Include="Files\SRC\yajl\api\yajl_version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Files\SRC\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\common1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\constructCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\csocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\cs_ev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\curl\curl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\curl\curlbuild.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\curl\curlrules.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\curl\curlver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\curl\easy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\curl\mprintf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\curl\multi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\dictionaryMore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\dictionarySystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\duktape\duktape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\duktape\duk_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\english.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\evserver\ev++.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\evserver\ev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\evserver\event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\evserver\ev_vars.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\evserver\ev_wrap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\evserver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\factSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\functionExecute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\evserver\ev++.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\evserver\ev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\evserver\event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\evserver\ev_vars.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\evserver\ev_wrap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\b64_ntop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\b64_pton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-atomic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-clock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-compat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-context-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-endian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-iso8601-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-iter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-json.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-keys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-macros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-md5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-oid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-reader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-stdint-win32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-string.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-thread-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-timegm-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-utf8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-value.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-version-functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson-writer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\bson\bson.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-apm-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-apm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-array-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-async-cmd-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-async-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-b64-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-buffer-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-bulk-operation-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-bulk-operation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-client-pool-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-client-pool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-client-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-cluster-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-collection-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-collection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-counters-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-crypto-common-crypto-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-crypto-openssl-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-crypto-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-cursor-array-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-cursor-cursorid-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-cursor-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-cursor-transform-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-cursor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-database-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-database.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-errno-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-find-and-modify-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-find-and-modify.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-flags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-gridfs-file-list-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-gridfs-file-list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-gridfs-file-page-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-gridfs-file-page.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-gridfs-file-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-gridfs-file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-gridfs-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-gridfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-host-list-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-host-list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-index.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-init.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-iovec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-list-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-log-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-matcher-op-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-matcher-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-matcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-memcmp-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-opcode-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-opcode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-openssl-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-queue-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-rand-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-rand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-read-concern-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-read-concern.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-read-prefs-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-read-prefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-rpc-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-sasl-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-scram-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-secure-transport-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-server-description-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-server-description.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-server-stream-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-set-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-socket-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-socket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-ssl-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-ssl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-stream-buffered.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-stream-file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-stream-gridfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-stream-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-stream-socket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl-bio-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-stream-tls-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-stream-tls-secure-transport-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-stream-tls-secure-transport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-stream-tls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-thread-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-topology-description-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-topology-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-topology-scanner-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-uri-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-uri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-util-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-version-functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-write-command-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-write-concern-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc-write-concern.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\mongoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\mongoc\utlist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\MongoDBClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\include\mongo\targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\infer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\jsmn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\json.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mainSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\markSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\b64_ntop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\b64_pton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-atomic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-clock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-compat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-context-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-endian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-iso8601-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-iter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-json.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-keys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-macros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-md5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-oid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-reader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-stdint-win32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-stdint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-string.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-thread-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-timegm-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-utf8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-value.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-version-functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson-writer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\bson\bson.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-apm-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-apm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-array-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-async-cmd-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-async-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-b64-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-buffer-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-bulk-operation-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-bulk-operation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-client-pool-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-client-pool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-client-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-cluster-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-collection-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-collection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-counters-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-crypto-common-crypto-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-crypto-openssl-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-crypto-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-cursor-array-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-cursor-cursorid-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-cursor-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-cursor-transform-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-cursor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-database-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-database.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-errno-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-find-and-modify-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-find-and-modify.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-flags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-gridfs-file-list-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-gridfs-file-list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-gridfs-file-page-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-gridfs-file-page.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-gridfs-file-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-gridfs-file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-gridfs-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-gridfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-host-list-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-host-list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-index.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-init.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-iovec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-list-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-log-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-matcher-op-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-matcher-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-matcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-memcmp-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-opcode-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-opcode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-openssl-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-queue-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-rand-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-rand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-read-concern-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-read-concern.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-read-prefs-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-read-prefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-rpc-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-sasl-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-scram-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-secure-transport-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-server-description-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-server-description.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-server-stream-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-set-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-socket-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-socket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-ssl-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-ssl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-stream-buffered.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-stream-file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-stream-gridfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-stream-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-stream-socket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-stream-tls-openssl-bio-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-stream-tls-openssl-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-stream-tls-openssl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-stream-tls-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-stream-tls-secure-transport-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-stream-tls-secure-transport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-stream-tls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-thread-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-topology-description-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-topology-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-topology-scanner-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-uri-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-uri.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-util-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-version-functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-write-command-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-write-concern-private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc-write-concern.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\mongoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\mongoc\utlist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\MongoDBClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongo\targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mongodb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\mprintf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\multi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\os.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\outputSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\patternSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\postgres\libpq-fe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\postgres\pg_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\postgres\pg_config_ext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\postgres\pg_config_os.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\postgres\postgres_ext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\postgres.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\privatesrc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\scriptCompile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\spellcheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\systemVariables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\tagger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\testing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\textUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\tokenSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\topicSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\userCache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\userSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\variableSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\yajl\api\yajl_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\yajl\api\yajl_gen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\yajl\api\yajl_parse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\yajl\api\yajl_tree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\yajl\yajl_alloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\yajl\yajl_buf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\yajl\yajl_bytestack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\yajl\yajl_encode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\yajl\yajl_lex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\yajl\yajl_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\SRC\yajl\yajl_version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Files\SRC\constructCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\csocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\cs_ev.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\dictionarySystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\duktape\duktape.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\english.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\englishTagger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\evserver\ev.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\evserver\event.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\evserver\ev_epoll.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\evserver\ev_kqueue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\evserver\ev_poll.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\evserver\ev_port.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\evserver\ev_select.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\evserver\ev_win32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\evserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\factSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\functionExecute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\evserver\ev.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\evserver\event.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\evserver\ev_epoll.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\evserver\ev_kqueue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\evserver\ev_poll.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\evserver\ev_port.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\evserver\ev_select.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\evserver\ev_win32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bcon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-atomic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-clock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-context.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-iso8601.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-iter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-json.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-keys.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-md5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-oid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-reader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-string.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-timegm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-utf8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-value.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-version-functions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson-writer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\bson\bson.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-apm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-array.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-async-cmd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-async.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-b64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-buffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-bulk-operation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-client-pool.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-client.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-cluster.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-collection.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-counters.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-crypto-common-crypto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-crypto-openssl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-crypto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-cursor-array.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-cursor-cursorid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-cursor-transform.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-cursor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-database.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-find-and-modify.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-gridfs-file-list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-gridfs-file-page.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-gridfs-file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-gridfs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-host-list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-index.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-log.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-matcher-op.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-matcher.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-memcmp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-opcode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-openssl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-queue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-rand-common-crypto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-rand-openssl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-read-concern.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-read-prefs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-rpc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-sasl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-scram.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-secure-transport.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-server-description.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-server-stream.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-set.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-socket.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-ssl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-stream-buffered.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-stream-file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-stream-gridfs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-stream-socket.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl-bio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-stream-tls-secure-transport.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-stream-tls.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-stream.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-topology-description.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-topology-scanner.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-topology.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-uri.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-version-functions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-write-command.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\include\mongo\mongoc\mongoc-write-concern.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\infer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\javascript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\jsmn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\json.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mainSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\markSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bcon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-atomic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-clock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-context.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-iso8601.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-iter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-json.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-keys.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-md5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-oid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-reader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-string.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-timegm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-utf8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-value.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-version-functions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson-writer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\bson\bson.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-apm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-array.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-async-cmd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-async.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-b64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-buffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-bulk-operation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-client-pool.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-client.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-cluster.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-collection.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-counters.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-crypto-common-crypto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-crypto-openssl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-crypto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-cursor-array.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-cursor-cursorid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-cursor-transform.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-cursor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-database.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-find-and-modify.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-gridfs-file-list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-gridfs-file-page.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-gridfs-file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-gridfs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-host-list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-index.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-log.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-matcher-op.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-matcher.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-memcmp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-opcode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-openssl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-queue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-rand-common-crypto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-rand-openssl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-read-concern.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-read-prefs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-rpc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-sasl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-scram.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-secure-transport.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-server-description.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-server-stream.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-set.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-socket.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-ssl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-stream-buffered.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-stream-file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-stream-gridfs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-stream-socket.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-stream-tls-openssl-bio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-stream-tls-openssl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-stream-tls-secure-transport.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-stream-tls.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-stream.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-topology-description.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-topology-scanner.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-topology.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-uri.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-version-functions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-write-command.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongo\mongoc\mongoc-write-concern.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\mongodb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\os.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\outputSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\patternSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\postgres.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\privatesrc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\scriptCompile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\secure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\spellcheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\systemVariables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\tagger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\testing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\textUtilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\tokenSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\topicSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\userCache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\userSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\variableSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\yajl\yajl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\yajl\yajl_alloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\yajl\yajl_buf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\yajl\yajl_encode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\yajl\yajl_gen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\yajl\yajl_lex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\yajl\yajl_parser.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\yajl\yajl_tree.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\SRC\yajl\yajl_version.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Files\authorizedIP.txt" />
+    <Text Include="Files\changes.txt" />
+    <Text Include="Files\license.txt" />
+    <Text Include="Files\readme.txt" />
+    <Text Include="Files\version.txt" />
+  </ItemGroup>
+</Project>
