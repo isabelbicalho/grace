@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="graca-dcc" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\BEL\\Source\\Repos\\grace\\ChatScript\\Graca\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\BEL\\Source\\Repos\\grace\\ChatScript\\Graca\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+</parameters>

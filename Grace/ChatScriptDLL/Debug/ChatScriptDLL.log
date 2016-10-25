@@ -1,0 +1,10 @@
+﻿  stdafx.cpp
+  ChatScript_wrap.cxx
+  ChatScriptDLL.cpp
+  Generating Code...
+  dllmain.cpp
+     Creating library C:\Users\BEL\Source\Repos\grace\Grace\Debug\ChatScriptDLL.lib and object C:\Users\BEL\Source\Repos\grace\Grace\Debug\ChatScriptDLL.exp
+ChatScript_wrap.obj : error LNK2019: unresolved external symbol "unsigned int __cdecl InitSystem(int,char * * const,char *,char *,char *,struct USERFILESYSTEM *)" (?InitSystem@@YAIHQAPADPAD11PAUUSERFILESYSTEM@@@Z) referenced in function _CSharp_ChatScript_InitSystem__SWIG_0@20
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets(637,5): error MSB6006: "link.exe" exited with code 1120.
+ChatScript_wrap.obj : error LNK2019: unresolved external symbol "int __cdecl PerformChat(char *,char *,char *,char *,char *)" (?PerformChat@@YAHPAD0000@Z) referenced in function _CSharp_ChatScript_PerformChat@20
+C:\Users\BEL\Source\Repos\grace\Grace\Debug\ChatScriptDLL.dll : fatal error LNK1120: 2 unresolved externals

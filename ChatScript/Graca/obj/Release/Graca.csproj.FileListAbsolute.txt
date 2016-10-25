@@ -1,0 +1,39 @@
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Bot Application1.dll.config
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Bot Application1.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Bot Application1.pdb
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Autofac.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Chronic.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Microsoft.Bot.Builder.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Microsoft.Bot.Connector.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Microsoft.Rest.ClientRuntime.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Newtonsoft.Json.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\System.Net.Http.Formatting.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\System.Web.Http.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\System.Web.Http.WebHost.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Autofac.xml
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Microsoft.Bot.Builder.xml
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Microsoft.Bot.Connector.xml
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Microsoft.Rest.ClientRuntime.xml
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\Newtonsoft.Json.xml
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\System.Net.Http.Formatting.xml
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\System.Web.Http.xml
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\System.Web.Http.WebHost.xml
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\ar\Microsoft.Bot.Builder.resources.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\en\Microsoft.Bot.Builder.resources.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\es\Microsoft.Bot.Builder.resources.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\fa\Microsoft.Bot.Builder.resources.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\fr\Microsoft.Bot.Builder.resources.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\ja\Microsoft.Bot.Builder.resources.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\ru\Microsoft.Bot.Builder.resources.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\obj\Release\Graca.csprojResolveAssemblyReference.cache
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\obj\Release\Bot Application1.dll
+C:\Users\BEL\Source\Repos\grace\ChatScript\Graca\obj\Release\Bot Application1.pdb

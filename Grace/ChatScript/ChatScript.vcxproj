@@ -1,0 +1,904 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{15CF6509-07A1-4722-8793-A92803D88CC0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ChatScript</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CHATSCRIPT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;CHATSCRIPT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CHATSCRIPT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;CHATSCRIPT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ChatScript\LOEBNERVS2010\loebner_chatbot\loebner_chatbot.h" />
+    <ClInclude Include="ChatScript\LOEBNERVS2010\loebner_chatbot\Resource.h" />
+    <ClInclude Include="ChatScript\LOEBNERVS2010\loebner_chatbot\stdafx.h" />
+    <ClInclude Include="ChatScript\LOEBNERVS2010\loebner_chatbot\targetver.h" />
+    <ClInclude Include="ChatScript\SRC\common.h" />
+    <ClInclude Include="ChatScript\SRC\common1.h" />
+    <ClInclude Include="ChatScript\SRC\constructCode.h" />
+    <ClInclude Include="ChatScript\SRC\csocket.h" />
+    <ClInclude Include="ChatScript\SRC\cs_ev.h" />
+    <ClInclude Include="ChatScript\SRC\curl\curl.h" />
+    <ClInclude Include="ChatScript\SRC\curl\curlbuild.h" />
+    <ClInclude Include="ChatScript\SRC\curl\curlrules.h" />
+    <ClInclude Include="ChatScript\SRC\curl\curlver.h" />
+    <ClInclude Include="ChatScript\SRC\curl\easy.h" />
+    <ClInclude Include="ChatScript\SRC\curl\mprintf.h" />
+    <ClInclude Include="ChatScript\SRC\curl\multi.h" />
+    <ClInclude Include="ChatScript\SRC\dictionaryMore.h" />
+    <ClInclude Include="ChatScript\SRC\dictionarySystem.h" />
+    <ClInclude Include="ChatScript\SRC\duktape\duktape.h" />
+    <ClInclude Include="ChatScript\SRC\duktape\duk_config.h" />
+    <ClInclude Include="ChatScript\SRC\english.h" />
+    <ClInclude Include="ChatScript\SRC\evserver.h" />
+    <ClInclude Include="ChatScript\SRC\evserver\ev++.h" />
+    <ClInclude Include="ChatScript\SRC\evserver\ev.h" />
+    <ClInclude Include="ChatScript\SRC\evserver\event.h" />
+    <ClInclude Include="ChatScript\SRC\evserver\ev_vars.h" />
+    <ClInclude Include="ChatScript\SRC\evserver\ev_wrap.h" />
+    <ClInclude Include="ChatScript\SRC\factSystem.h" />
+    <ClInclude Include="ChatScript\SRC\functionExecute.h" />
+    <ClInclude Include="ChatScript\SRC\include\evserver\ev++.h" />
+    <ClInclude Include="ChatScript\SRC\include\evserver\ev.h" />
+    <ClInclude Include="ChatScript\SRC\include\evserver\event.h" />
+    <ClInclude Include="ChatScript\SRC\include\evserver\ev_vars.h" />
+    <ClInclude Include="ChatScript\SRC\include\evserver\ev_wrap.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\b64_ntop.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\b64_pton.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bcon.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-atomic.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-clock.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-compat.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-context-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-context.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-endian.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-error.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-iso8601-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-iter.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-json.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-keys.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-macros.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-md5.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-memory.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-oid.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-reader.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-stdint-win32.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-string.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-thread-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-timegm-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-types.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-utf8.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-value.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-version-functions.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson-writer.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\bson\bson.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-apm-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-apm.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-array-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-async-cmd-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-async-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-b64-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-buffer-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-bulk-operation-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-bulk-operation.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-client-pool-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-client-pool.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-client-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-client.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-cluster-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-collection-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-collection.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-counters-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-crypto-common-crypto-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-crypto-openssl-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-crypto-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-cursor-array-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-cursor-cursorid-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-cursor-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-cursor-transform-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-cursor.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-database-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-database.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-errno-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-error.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-find-and-modify-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-find-and-modify.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-flags.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-gridfs-file-list-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-gridfs-file-list.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-gridfs-file-page-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-gridfs-file-page.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-gridfs-file-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-gridfs-file.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-gridfs-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-gridfs.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-host-list-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-host-list.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-index.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-init.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-iovec.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-list-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-log-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-log.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-matcher-op-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-matcher-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-matcher.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-memcmp-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-opcode-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-opcode.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-openssl-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-queue-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-rand-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-rand.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-read-concern-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-read-concern.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-read-prefs-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-read-prefs.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-rpc-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-sasl-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-scram-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-secure-transport-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-server-description-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-server-description.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-server-stream-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-set-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-socket-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-socket.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-ssl-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-ssl.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-buffered.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-file.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-gridfs.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-socket.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl-bio-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-tls-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-tls-secure-transport-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-tls-secure-transport.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-tls.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-thread-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-topology-description-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-topology-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-topology-scanner-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-trace.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-uri-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-uri.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-util-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-version-functions.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-write-command-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-write-concern-private.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc-write-concern.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\mongoc.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\mongoc\utlist.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\MongoDBClient.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\stdafx.h" />
+    <ClInclude Include="ChatScript\SRC\include\mongo\targetver.h" />
+    <ClInclude Include="ChatScript\SRC\infer.h" />
+    <ClInclude Include="ChatScript\SRC\jsmn.h" />
+    <ClInclude Include="ChatScript\SRC\json.h" />
+    <ClInclude Include="ChatScript\SRC\mainSystem.h" />
+    <ClInclude Include="ChatScript\SRC\markSystem.h" />
+    <ClInclude Include="ChatScript\SRC\mongodb.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\b64_ntop.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\b64_pton.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bcon.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-atomic.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-clock.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-compat.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-context-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-context.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-endian.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-error.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-iso8601-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-iter.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-json.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-keys.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-macros.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-md5.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-memory.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-oid.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-reader.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-stdint-win32.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-string.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-thread-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-timegm-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-types.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-utf8.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-value.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-version-functions.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson-writer.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\bson\bson.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-apm-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-apm.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-array-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-async-cmd-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-async-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-b64-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-buffer-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-bulk-operation-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-bulk-operation.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-client-pool-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-client-pool.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-client-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-client.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-cluster-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-collection-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-collection.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-counters-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-crypto-common-crypto-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-crypto-openssl-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-crypto-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-cursor-array-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-cursor-cursorid-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-cursor-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-cursor-transform-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-cursor.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-database-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-database.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-errno-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-error.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-find-and-modify-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-find-and-modify.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-flags.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-gridfs-file-list-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-gridfs-file-list.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-gridfs-file-page-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-gridfs-file-page.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-gridfs-file-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-gridfs-file.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-gridfs-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-gridfs.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-host-list-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-host-list.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-index.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-init.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-iovec.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-list-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-log-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-log.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-matcher-op-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-matcher-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-matcher.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-memcmp-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-opcode-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-opcode.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-openssl-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-queue-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-rand-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-rand.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-read-concern-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-read-concern.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-read-prefs-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-read-prefs.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-rpc-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-sasl-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-scram-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-secure-transport-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-server-description-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-server-description.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-server-stream-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-set-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-socket-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-socket.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-ssl-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-ssl.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-buffered.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-file.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-gridfs.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-socket.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-tls-openssl-bio-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-tls-openssl-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-tls-openssl.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-tls-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-tls-secure-transport-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-tls-secure-transport.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-tls.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-stream.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-thread-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-topology-description-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-topology-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-topology-scanner-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-trace.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-uri-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-uri.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-util-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-version-functions.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-write-command-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-write-concern-private.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc-write-concern.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\mongoc.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\mongoc\utlist.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\MongoDBClient.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\stdafx.h" />
+    <ClInclude Include="ChatScript\SRC\mongo\targetver.h" />
+    <ClInclude Include="ChatScript\SRC\mprintf.h" />
+    <ClInclude Include="ChatScript\SRC\multi.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\big_endian.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\binary_log_types.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\byte_order_generic.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\byte_order_generic_x86.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\decimal.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\errmsg.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\keycache.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\little_endian.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysqld_ername.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysqld_error.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\client_authentication.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\client_plugin.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\com_data.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\get_password.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\group_replication_priv.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\innodb_priv.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\mysql_lex_string.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\plugin.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\plugin_audit.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\plugin_auth.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\plugin_auth_common.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\plugin_ftparser.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\plugin_group_replication.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\plugin_keyring.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\plugin_trace.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\plugin_validate_password.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\mysql_file.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\mysql_idle.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\mysql_mdl.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\mysql_memory.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\mysql_ps.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\mysql_socket.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\mysql_sp.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\mysql_stage.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\mysql_statement.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\mysql_table.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\mysql_thread.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\mysql_transaction.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\psi.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\psi_base.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\psi\psi_memory.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\services.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_command.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_locking.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_mysql_alloc.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_mysql_keyring.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_mysql_password_policy.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_mysql_string.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_my_plugin_log.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_my_snprintf.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_parser.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_rpl_transaction_ctx.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_rpl_transaction_write_set.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_rules_table.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_security_context.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_srv_session.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_srv_session_info.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_ssl_wrapper.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_thd_alloc.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_thd_engine_lock.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_thd_wait.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\service_thread_scheduler.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\thread_pool_priv.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql\thread_type.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql_com.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql_com_server.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql_embed.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql_time.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\mysql_version.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\my_alloc.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\my_byteorder.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\my_command.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\my_compiler.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\my_config.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\my_dbug.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\my_dir.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\my_getopt.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\my_global.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\my_list.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\my_sys.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\my_thread.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\my_thread_local.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\my_xml.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\m_ctype.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\m_string.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\plugin.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\plugin_audit.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\plugin_ftparser.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\plugin_group_replication.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\plugin_keyring.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\plugin_validate_password.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\sql_common.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\sql_state.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\sslopt-case.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\sslopt-longopts.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\sslopt-vars.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\thr_cond.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\thr_mutex.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\thr_rwlock.h" />
+    <ClInclude Include="ChatScript\SRC\mysql\include\typelib.h" />
+    <ClInclude Include="ChatScript\SRC\my_sql.h" />
+    <ClInclude Include="ChatScript\SRC\os.h" />
+    <ClInclude Include="ChatScript\SRC\outputSystem.h" />
+    <ClInclude Include="ChatScript\SRC\patternSystem.h" />
+    <ClInclude Include="ChatScript\SRC\postgres.h" />
+    <ClInclude Include="ChatScript\SRC\postgres\libpq-fe.h" />
+    <ClInclude Include="ChatScript\SRC\postgres\pg_config.h" />
+    <ClInclude Include="ChatScript\SRC\postgres\pg_config_ext.h" />
+    <ClInclude Include="ChatScript\SRC\postgres\pg_config_os.h" />
+    <ClInclude Include="ChatScript\SRC\postgres\postgres_ext.h" />
+    <ClInclude Include="ChatScript\SRC\privatesrc.h" />
+    <ClInclude Include="ChatScript\SRC\scriptCompile.h" />
+    <ClInclude Include="ChatScript\SRC\spellcheck.h" />
+    <ClInclude Include="ChatScript\SRC\systemVariables.h" />
+    <ClInclude Include="ChatScript\SRC\tagger.h" />
+    <ClInclude Include="ChatScript\SRC\testing.h" />
+    <ClInclude Include="ChatScript\SRC\textUtilities.h" />
+    <ClInclude Include="ChatScript\SRC\tokenSystem.h" />
+    <ClInclude Include="ChatScript\SRC\topicSystem.h" />
+    <ClInclude Include="ChatScript\SRC\userCache.h" />
+    <ClInclude Include="ChatScript\SRC\userSystem.h" />
+    <ClInclude Include="ChatScript\SRC\variableSystem.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ChatScript.cpp" />
+    <ClCompile Include="ChatScript\LOEBNERVS2010\loebner_chatbot\loebner_chatbot.cpp" />
+    <ClCompile Include="ChatScript\LOEBNERVS2010\loebner_chatbot\stdafx.cpp" />
+    <ClCompile Include="ChatScript\SRC\constructCode.cpp" />
+    <ClCompile Include="ChatScript\SRC\csocket.cpp" />
+    <ClCompile Include="ChatScript\SRC\cs_ev.c" />
+    <ClCompile Include="ChatScript\SRC\dictionarySystem.cpp" />
+    <ClCompile Include="ChatScript\SRC\duktape\duktape.c" />
+    <ClCompile Include="ChatScript\SRC\english.cpp" />
+    <ClCompile Include="ChatScript\SRC\englishTagger.cpp" />
+    <ClCompile Include="ChatScript\SRC\evserver.cpp" />
+    <ClCompile Include="ChatScript\SRC\evserver\ev.c" />
+    <ClCompile Include="ChatScript\SRC\evserver\event.c" />
+    <ClCompile Include="ChatScript\SRC\evserver\ev_epoll.c" />
+    <ClCompile Include="ChatScript\SRC\evserver\ev_kqueue.c" />
+    <ClCompile Include="ChatScript\SRC\evserver\ev_poll.c" />
+    <ClCompile Include="ChatScript\SRC\evserver\ev_port.c" />
+    <ClCompile Include="ChatScript\SRC\evserver\ev_select.c" />
+    <ClCompile Include="ChatScript\SRC\evserver\ev_win32.c" />
+    <ClCompile Include="ChatScript\SRC\factSystem.cpp" />
+    <ClCompile Include="ChatScript\SRC\functionExecute.cpp" />
+    <ClCompile Include="ChatScript\SRC\include\evserver\ev.c" />
+    <ClCompile Include="ChatScript\SRC\include\evserver\event.c" />
+    <ClCompile Include="ChatScript\SRC\include\evserver\ev_epoll.c" />
+    <ClCompile Include="ChatScript\SRC\include\evserver\ev_kqueue.c" />
+    <ClCompile Include="ChatScript\SRC\include\evserver\ev_poll.c" />
+    <ClCompile Include="ChatScript\SRC\include\evserver\ev_port.c" />
+    <ClCompile Include="ChatScript\SRC\include\evserver\ev_select.c" />
+    <ClCompile Include="ChatScript\SRC\include\evserver\ev_win32.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bcon.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-atomic.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-clock.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-context.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-error.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-iso8601.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-iter.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-json.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-keys.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-md5.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-memory.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-oid.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-reader.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-string.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-timegm.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-utf8.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-value.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-version-functions.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson-writer.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\bson\bson.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-apm.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-array.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-async-cmd.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-async.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-b64.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-buffer.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-bulk-operation.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-client-pool.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-client.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-cluster.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-collection.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-counters.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-crypto-common-crypto.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-crypto-openssl.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-crypto.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-cursor-array.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-cursor-cursorid.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-cursor-transform.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-cursor.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-database.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-find-and-modify.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-gridfs-file-list.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-gridfs-file-page.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-gridfs-file.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-gridfs.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-host-list.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-index.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-init.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-list.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-log.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-matcher-op.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-matcher.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-memcmp.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-opcode.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-openssl.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-queue.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-rand-common-crypto.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-rand-openssl.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-read-concern.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-read-prefs.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-rpc.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-sasl.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-scram.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-secure-transport.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-server-description.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-server-stream.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-set.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-socket.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-ssl.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-buffered.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-file.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-gridfs.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-socket.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl-bio.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-tls-openssl.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-tls-secure-transport.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream-tls.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-stream.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-topology-description.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-topology-scanner.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-topology.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-uri.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-util.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-version-functions.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-write-command.c" />
+    <ClCompile Include="ChatScript\SRC\include\mongo\mongoc\mongoc-write-concern.c" />
+    <ClCompile Include="ChatScript\SRC\infer.cpp" />
+    <ClCompile Include="ChatScript\SRC\javascript.cpp" />
+    <ClCompile Include="ChatScript\SRC\jsmn.cpp" />
+    <ClCompile Include="ChatScript\SRC\json.cpp" />
+    <ClCompile Include="ChatScript\SRC\mainSystem.cpp" />
+    <ClCompile Include="ChatScript\SRC\markSystem.cpp" />
+    <ClCompile Include="ChatScript\SRC\mongodb.cpp" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bcon.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-atomic.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-clock.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-context.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-error.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-iso8601.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-iter.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-json.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-keys.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-md5.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-memory.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-oid.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-reader.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-string.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-timegm.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-utf8.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-value.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-version-functions.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson-writer.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\bson\bson.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-apm.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-array.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-async-cmd.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-async.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-b64.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-buffer.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-bulk-operation.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-client-pool.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-client.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-cluster.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-collection.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-counters.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-crypto-common-crypto.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-crypto-openssl.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-crypto.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-cursor-array.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-cursor-cursorid.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-cursor-transform.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-cursor.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-database.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-find-and-modify.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-gridfs-file-list.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-gridfs-file-page.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-gridfs-file.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-gridfs.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-host-list.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-index.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-init.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-list.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-log.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-matcher-op.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-matcher.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-memcmp.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-opcode.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-openssl.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-queue.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-rand-common-crypto.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-rand-openssl.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-read-concern.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-read-prefs.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-rpc.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-sasl.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-scram.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-secure-transport.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-server-description.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-server-stream.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-set.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-socket.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-ssl.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-buffered.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-file.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-gridfs.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-socket.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-tls-openssl-bio.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-tls-openssl.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-tls-secure-transport.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-stream-tls.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-stream.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-topology-description.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-topology-scanner.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-topology.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-uri.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-util.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-version-functions.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-write-command.c" />
+    <ClCompile Include="ChatScript\SRC\mongo\mongoc\mongoc-write-concern.c" />
+    <ClCompile Include="ChatScript\SRC\mysql.cpp" />
+    <ClCompile Include="ChatScript\SRC\os.cpp" />
+    <ClCompile Include="ChatScript\SRC\outputSystem.cpp" />
+    <ClCompile Include="ChatScript\SRC\patternSystem.cpp" />
+    <ClCompile Include="ChatScript\SRC\postgres.cpp" />
+    <ClCompile Include="ChatScript\SRC\privatesrc.cpp" />
+    <ClCompile Include="ChatScript\SRC\scriptCompile.cpp" />
+    <ClCompile Include="ChatScript\SRC\secure.cpp" />
+    <ClCompile Include="ChatScript\SRC\spellcheck.cpp" />
+    <ClCompile Include="ChatScript\SRC\systemVariables.cpp" />
+    <ClCompile Include="ChatScript\SRC\tagger.cpp" />
+    <ClCompile Include="ChatScript\SRC\testing.cpp" />
+    <ClCompile Include="ChatScript\SRC\textUtilities.cpp" />
+    <ClCompile Include="ChatScript\SRC\tokenSystem.cpp" />
+    <ClCompile Include="ChatScript\SRC\topicSystem.cpp" />
+    <ClCompile Include="ChatScript\SRC\userCache.cpp" />
+    <ClCompile Include="ChatScript\SRC\userSystem.cpp" />
+    <ClCompile Include="ChatScript\SRC\variableSystem.cpp" />
+    <ClCompile Include="ChatScript_wrap.cxx" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ChatScript.cs" />
+    <None Include="ChatScript.i" />
+    <None Include="ChatScriptPINVOKE.cs" />
+    <None Include="ChatScript\DICT\ENGLISH\dict.bin" />
+    <None Include="ChatScript\DICT\ENGLISH\facts.bin" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ChatScript-Advanced-User-Manual.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ChatScript-Basic-User-Manual.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ChatScript-Debugging-Manual.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ChatScript-Fact-Manual.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ChatScript-Finalizing-A-Bot.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ChatScript-Json.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ChatScript-Memorization.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ChatScript-Overview-of-Input-to-Output.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ChatScript-Pattern-Redux.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ChatScript-System-Functions-Manual.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ChatScript-System-Variables-and-Engine-defined-Concepts.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\CLIENTS-AND-SERVERS\ChatScript-Amazon-Server.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\CLIENTS-AND-SERVERS\ChatScript-ClientServer-Manual.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\CLIENTS-AND-SERVERS\ChatScript-External-Communications.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Analytics-Manual.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Control-Scripts.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Document-Reader.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Engine-Manual.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Exotica-Examples.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Javascript.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-MongoDB.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-Planning.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-PosParser.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\ESOTERIC-CHATSCRIPT\ChatScript-PostgreSQL.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\Installing-and-Updating-ChatScript.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\OVERVIEWS-AND-TUTORIALS\ChatScript-Tutorial.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\OVERVIEWS-AND-TUTORIALS\What-is-ChatScript.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-German.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-Harry.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-NLTK.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-Postgres.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\PREDEFINED-BOTS\Bot-Stockpile.html" />
+    <None Include="ChatScript\HTMLDOCUMENTATION\README.html" />
+    <None Include="ChatScript\README.html" />
+    <None Include="ChatScript\SRC\include\mongo\mongoc\op-delete.def" />
+    <None Include="ChatScript\SRC\include\mongo\mongoc\op-get-more.def" />
+    <None Include="ChatScript\SRC\include\mongo\mongoc\op-header.def" />
+    <None Include="ChatScript\SRC\include\mongo\mongoc\op-insert.def" />
+    <None Include="ChatScript\SRC\include\mongo\mongoc\op-kill-cursors.def" />
+    <None Include="ChatScript\SRC\include\mongo\mongoc\op-msg.def" />
+    <None Include="ChatScript\SRC\include\mongo\mongoc\op-query.def" />
+    <None Include="ChatScript\SRC\include\mongo\mongoc\op-reply.def" />
+    <None Include="ChatScript\SRC\include\mongo\mongoc\op-update.def" />
+    <None Include="ChatScript\SRC\mongo\mongoc\op-delete.def" />
+    <None Include="ChatScript\SRC\mongo\mongoc\op-get-more.def" />
+    <None Include="ChatScript\SRC\mongo\mongoc\op-header.def" />
+    <None Include="ChatScript\SRC\mongo\mongoc\op-insert.def" />
+    <None Include="ChatScript\SRC\mongo\mongoc\op-kill-cursors.def" />
+    <None Include="ChatScript\SRC\mongo\mongoc\op-msg.def" />
+    <None Include="ChatScript\SRC\mongo\mongoc\op-query.def" />
+    <None Include="ChatScript\SRC\mongo\mongoc\op-reply.def" />
+    <None Include="ChatScript\SRC\mongo\mongoc\op-update.def" />
+    <None Include="SWIGTYPE_p_p_char.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="ChatScript\LOEBNERVS2010\loebner_chatbot\Debug\loebner_chatbot.exe.embed.manifest" />
+    <Manifest Include="ChatScript\LOEBNERVS2010\loebner_chatbot\Debug\loebner_chatbot.exe.intermediate.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ChatScript\LOEBNERVS2010\loebner_chatbot\Debug\loebner_chatbot_manifest.rc" />
+    <ResourceCompile Include="ChatScript\LOEBNERVS2010\loebner_chatbot\loebner_chatbot.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
