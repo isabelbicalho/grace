@@ -9,6 +9,17 @@ namespace Grace
 {
     public static class WebApiConfig
     {
+        public static RiveScript.RiveScript rs = new RiveScript.RiveScript();
+
+        public static void InitServer()
+        {
+            rs.setHandler("csharp", new RiveScript.lang.CSharp());
+            rs.loadDirectory(AppDomain.CurrentDomain.RelativeSearchPath + "\\RiveFiles");
+            //string lines = (new System.Net.WebClient()).DownloadString("https://homepages.dcc.ufmg.br/~isabel.amaro/RiveFiles/basic_reply_1.rs");
+            //rs.stream(lines.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
+            rs.sortReplies();
+        }
+
         public static void Register(HttpConfiguration config)
         {
             // Json settings
@@ -32,6 +43,7 @@ namespace Grace
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            InitServer();
         }
     }
 }

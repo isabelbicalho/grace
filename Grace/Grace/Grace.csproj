@@ -129,6 +129,8 @@
     <Content Include="packages.config" />
     <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
     <Content Include="apiapp.json" />
+    <Content Include="basic_reply_1.rs" />
+    <Content Include="basic_reply_2.rive" />
     <None Include="Properties\PublishProfiles\grace-dcc.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -136,6 +138,16 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="RiveFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RiveScript\RiveScript.csproj">
+      <Project>{64f4b1cd-cdd0-456c-8e7c-bc3afe8f4672}</Project>
+      <Name>RiveScript</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

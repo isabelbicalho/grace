@@ -7,18 +7,34 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Microsoft.Bot.Connector;
 using Newtonsoft.Json;
+using System.Runtime.InteropServices;
 
 namespace Grace
 {
     [BotAuthentication]
     public class MessagesController : ApiController
     {
+        public static bool initSystem = true;
+
+        /*public static RiveScript.RiveScript rs = new RiveScript.RiveScript();
+
+        public static void InitServer()
+        {
+            rs.setHandler("csharp", new RiveScript.lang.CSharp());
+            rs.loadDirectory(AppDomain.CurrentDomain.RelativeSearchPath + "\\RiveFiles");
+            rs.sortReplies();
+        }*/
+
         /// <summary>
         /// POST: api/Messages
         /// Receive a message from a user and reply to it
         /// </summary>
         public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
         {
+            /*if (initSystem) {
+                InitServer();
+                initSystem = false;
+            }*/
             if (activity.Type == ActivityTypes.Message)
             {
                 ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
@@ -26,7 +42,9 @@ namespace Grace
                 int length = (activity.Text ?? string.Empty).Length;
 
                 // return our reply to the user
-                Activity reply = activity.CreateReply($"You sent {activity.Text} which was {length} characters");
+                //Activity reply = activity.CreateReply($"You sent {activity.Text} which was {length} characters");
+                string message = WebApiConfig.rs.reply(activity.Conversation.Id,activity.Text);
+                Activity reply = activity.CreateReply(message);
                 await connector.Conversations.ReplyToActivityAsync(reply);
             }
             else

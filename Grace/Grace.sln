@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grace", "Grace\Grace.csproj", "{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChatScript", "ChatScript\ChatScript.vcxproj", "{15CF6509-07A1-4722-8793-A92803D88CC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiveScript", "..\RiveScript\RiveScript.csproj", "{64F4B1CD-CDD0-456C-8E7C-BC3AFE8F4672}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,16 +29,18 @@ Global
 		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|x64.Build.0 = Release|Any CPU
 		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|x86.ActiveCfg = Release|Any CPU
 		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|x86.Build.0 = Release|Any CPU
-		{15CF6509-07A1-4722-8793-A92803D88CC0}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{15CF6509-07A1-4722-8793-A92803D88CC0}.Debug|x64.ActiveCfg = Debug|x64
-		{15CF6509-07A1-4722-8793-A92803D88CC0}.Debug|x64.Build.0 = Debug|x64
-		{15CF6509-07A1-4722-8793-A92803D88CC0}.Debug|x86.ActiveCfg = Debug|Win32
-		{15CF6509-07A1-4722-8793-A92803D88CC0}.Debug|x86.Build.0 = Debug|Win32
-		{15CF6509-07A1-4722-8793-A92803D88CC0}.Release|Any CPU.ActiveCfg = Release|Win32
-		{15CF6509-07A1-4722-8793-A92803D88CC0}.Release|x64.ActiveCfg = Release|x64
-		{15CF6509-07A1-4722-8793-A92803D88CC0}.Release|x64.Build.0 = Release|x64
-		{15CF6509-07A1-4722-8793-A92803D88CC0}.Release|x86.ActiveCfg = Release|Win32
-		{15CF6509-07A1-4722-8793-A92803D88CC0}.Release|x86.Build.0 = Release|Win32
+		{64F4B1CD-CDD0-456C-8E7C-BC3AFE8F4672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F4B1CD-CDD0-456C-8E7C-BC3AFE8F4672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F4B1CD-CDD0-456C-8E7C-BC3AFE8F4672}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{64F4B1CD-CDD0-456C-8E7C-BC3AFE8F4672}.Debug|x64.Build.0 = Debug|Any CPU
+		{64F4B1CD-CDD0-456C-8E7C-BC3AFE8F4672}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{64F4B1CD-CDD0-456C-8E7C-BC3AFE8F4672}.Debug|x86.Build.0 = Debug|Any CPU
+		{64F4B1CD-CDD0-456C-8E7C-BC3AFE8F4672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F4B1CD-CDD0-456C-8E7C-BC3AFE8F4672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F4B1CD-CDD0-456C-8E7C-BC3AFE8F4672}.Release|x64.ActiveCfg = Release|Any CPU
+		{64F4B1CD-CDD0-456C-8E7C-BC3AFE8F4672}.Release|x64.Build.0 = Release|Any CPU
+		{64F4B1CD-CDD0-456C-8E7C-BC3AFE8F4672}.Release|x86.ActiveCfg = Release|Any CPU
+		{64F4B1CD-CDD0-456C-8E7C-BC3AFE8F4672}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

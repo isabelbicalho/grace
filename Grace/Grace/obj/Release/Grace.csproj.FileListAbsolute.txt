@@ -37,3 +37,5 @@ C:\Users\BEL\Source\Repos\grace\Grace\Grace\bin\zh-hans\Microsoft.Bot.Builder.re
 C:\Users\BEL\Source\Repos\grace\Grace\Grace\obj\Release\Grace.csprojResolveAssemblyReference.cache
 C:\Users\BEL\Source\Repos\grace\Grace\Grace\obj\Release\Bot Application1.dll
 C:\Users\BEL\Source\Repos\grace\Grace\Grace\obj\Release\Bot Application1.pdb
+C:\Users\BEL\Source\Repos\grace\Grace\Grace\bin\RiveScript.dll
+C:\Users\BEL\Source\Repos\grace\Grace\Grace\bin\RiveScript.pdb
